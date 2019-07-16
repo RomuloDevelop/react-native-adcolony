@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.1'
+        classpath 'com.android.tools.build:gradle:2.3.2'
     }
 }
 
@@ -17,7 +17,6 @@ def safeExtGet(prop, fallback) {
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 23)
-    buildToolsVersion safeExtGet('buildToolsVersion', '23.0.1')
 
 
     defaultConfig {
@@ -34,6 +33,7 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    buildToolsVersion '25.0.0'
 }
 
 repositories {
@@ -43,6 +43,6 @@ repositories {
 dependencies {
     compile "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
     compile 'com.google.android.gms:play-services-ads:+'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
   
