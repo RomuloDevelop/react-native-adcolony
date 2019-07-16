@@ -19,6 +19,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
+import java.util.HashMap;
+
 public class RNAdcolonyModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
